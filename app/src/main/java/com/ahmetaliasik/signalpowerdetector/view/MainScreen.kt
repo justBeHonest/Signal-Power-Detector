@@ -128,40 +128,6 @@ fun VuMeter(
     }
 }
 
-
-/*
-@Composable
-fun VuMeter(
-    value: Int,
-    count : Int
-) {
-    val activeBars = (value / 5f).toInt()
-    LazyColumn(reverseLayout = true, horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        items(count) {
-            val progress = (it + 1) / count.toFloat()
-            val activeColor = vuColor(progress)
-            val color = if (it <= activeBars) {
-                activeColor
-            } else {
-                activeColor.copy(alpha = 0.25f) // passive
-            }
-                Card(modifier = Modifier.width(100.dp).height(20.dp),
-                    shape = RoundedCornerShape(24.dp),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = color
-                    )
-                )
-                { Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-                    Text((it*5) .toString(), fontSize = 10.sp, color = lerp(color, Color.White, 0.7f))
-                }
-
-                }
-        }
-    }
-}*/
-
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview()
